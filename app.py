@@ -1,5 +1,5 @@
 from flask import Flask
-from random import choice
+from src.tarot_deck import TarotDeck
 
 app = Flask(__name__)
 
@@ -20,10 +20,16 @@ random_text_options = [
     "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
 ]
 
+# Is this the right place to put this?
+
+deck = TarotDeck()
+
+
+
 @app.route('/generate', methods=['POST'])
 def generate_text():
-    random_text = choice(random_text_options)
-    return random_text
+    deck.draw()
+    return deck.prompt
 
 
 if __name__ == '__main__':
