@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template
 from src.tarot_deck import TarotDeck
 
 app = Flask(__name__)
 
-
+"""
 @app.route('/')
 def home():
     return '''
@@ -11,25 +11,24 @@ def home():
         <button type="submit">Generate Random Text</button>
     </form>
     '''
+"""
+@app.route('/')
+def home():
+    return render_template('index.html')
 
-
-# Sample data for demonstration
-random_text_options = [
-    "Lorem ipsum dolor sit amet",
-    "Consectetur adipiscing elit",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-]
 
 # Is this the right place to put this?
-
 deck = TarotDeck()
 
 
 
-@app.route('/generate', methods=['POST'])
+@app.route('/draw', methods=['GET'])
 def generate_text():
     deck.draw()
-    return deck.prompt
+    card = deck.card
+    prompt = deck.prompt
+    return render_template('draw.html', card=card, prompt=prompt)
+    #return deck.prompt
 
 
 if __name__ == '__main__':
