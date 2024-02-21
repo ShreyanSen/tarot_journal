@@ -1,15 +1,20 @@
-{% extends "base.html" %}
 
-{% block title %}Random Color Generator{% endblock %}
 
-{% block content %}
 
-<div class="jumbotron text-center">
-    <h1 class="display-4">Welcome to Random Color Generator</h1>
-    <p class="lead">Generate a random color with just one click!</p>
+{% extends "hypno.html" %}
+
+
+{% block title %}Card{% endblock %}
+
+
+{% block subcontent %}
+
+<div class="text-center">
+    <h1 class="display-4">The Pensive Tarot</h1>
+    <p>Not The Card You Want <br> The Card You Need</p>
+    <div class="container my-2">
+    <button type="button" class="btn btn-outline-light" onclick="window.location.href='/draw'">Draw Card</button>
+
 </div>
 
-<div class="jumbotron text-center">
-    <button class="btn btn-outline-primary" onclick="window.location.href='/draw'">Draw Tarot Prompt</button>
-</div>
 {% endblock %}

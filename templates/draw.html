@@ -1,14 +1,20 @@
-{% extends "base.html" %}
+{% extends "hypno.html" %}
 
 
 {% block title %}Card{% endblock %}
 
 
-{% block content %}
+{% block subcontent %}
 
-<div class="jumbotron text-center">
-    <h1 class="display-4">{{ card }}</h1>
-    <p class="lead">{{ prompt }}</p>
+<div class="text-center">
+    <h6 class="display-4">{{ card }}</h6>
+    <br>
+    <p>{{ prompt }}</p>
+
+    <div class="container my-2">
+    <button type="button" class="btn btn-outline-light btn-sm" onclick="window.location.href='/draw'">Redraw</button>
+    </div>
+
 </div>
 
 {% endblock %}

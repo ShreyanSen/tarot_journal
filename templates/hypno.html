@@ -1,0 +1,18 @@
+{% extends "base2.html" %}
+{% block title %}Random Color Generator{% endblock %}
+
+{% block content %}
+
+<div class="container d-flex align-items-center vh-100">
+<div class="container-sm p-2 my-1 bg-dark rounded-3">
+<div class="container-sm p-2 my-1 bg-light rounded-3">
+<div class="container-sm p-2 my-1 bg-dark rounded-3 text-white">
+    {% block subcontent %}{% endblock %}
+
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}
