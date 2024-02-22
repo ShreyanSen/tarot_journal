@@ -9,12 +9,33 @@
 
 {% block subcontent %}
 
+<!--
 <div class="text-center">
-    <h1 class="display-4">The Pensive Tarot</h1>
-    <p>Not The Card You Want <br> The Card You Need</p>
-    <div class="container my-2">
+    <h1 class="display-3 mb-0">Pensive Tarot</h1>
+    <p class="my-2 fs-5 fw-lighter">Writing Prompts</p>
+    <p class=" my-5 fw-normal">Not The Card You Want <br> The Card You Get </p>
+    </div>
+    <div class="container my-5 text-center">
     <button type="button" class="btn btn-outline-light" onclick="window.location.href='/draw'">Draw Card</button>
 
 </div>
+-->
+
+<div class="text-center">
+    <h1 class="display-4 mb-0">Pensive Tarot</h1>
+    <p class="fs-5 fw-lighter">Writing Prompts</p>
+
+
+</div>
+<div class="text-center">
+
+    <!-- Create a box around our motto: <div class="d-inline-flex p-2 border rounded-3"> -->
+    <p class="fw-normal">Not The Card You Want <br> The Card You Get </p>
+</div>
+<div class="container text-center">
+    <button type="button" class="btn btn-outline-light" onclick="window.location.href='/draw'">Draw Card</button>
+
+</div>
+
 
 {% endblock %}

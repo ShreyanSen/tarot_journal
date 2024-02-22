@@ -6,14 +6,31 @@
 
 {% block subcontent %}
 
+
+<!--
+
 <div class="text-center">
-    <h6 class="display-4">{{ card }}</h6>
+    <h1 class="display-3">{{ card }}</h1>
     <br>
     <p>{{ prompt }}</p>
 
-    <div class="container my-2">
-    <button type="button" class="btn btn-outline-light btn-sm" onclick="window.location.href='/draw'">Redraw</button>
+    <div class="container my-5">
+    <button type="button" class="btn btn-outline-light" onclick="window.location.href='/draw'">Redraw</button>
     </div>
+
+</div>
+-->
+
+<div class="text-center">
+    <h1 class="display-4">{{ card }}</h1>
+
+</div>
+<div class="text-center">
+    <p>{{ prompt }}</p>
+</div>
+<div class="container text-center">
+    <button type="button" class="btn btn-outline-light" onclick="window.location.href='/draw'">Redraw</button>
+
 
 </div>
 

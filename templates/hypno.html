@@ -3,10 +3,12 @@
 
 {% block content %}
 
-<div class="container d-flex align-items-center vh-100">
-<div class="container-sm p-2 my-1 bg-dark rounded-3">
-<div class="container-sm p-2 my-1 bg-light rounded-3">
-<div class="container-sm p-2 my-1 bg-dark rounded-3 text-white">
+<!-- <div class="container d-flex align-items-center vh-100"> -->
+<!--<div class="container-sm d-flex align-items-center vh-100", style="width: 100%; max-width: 350px" > -->
+<div class="container-sm vh-100"  style="max-width: 350px" >
+<div class="container-sm p-2 my-1 bg-dark rounded-3 h-75">
+<div class="container-sm p-2 my-1 bg-light rounded-3 h-100">
+<div class="container-sm p-2 my-1 bg-dark rounded-3 h-100 text-white d-flex justify-content-evenly " style="flex-direction: column">
     {% block subcontent %}{% endblock %}
 
 </div>
